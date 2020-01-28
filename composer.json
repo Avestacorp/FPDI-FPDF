@@ -1,5 +1,6 @@
 {
     "name": "setasign/fpdi-fpdf",
+    "version": "1.6.2",
     "homepage": "https://www.setasign.com/fpdi",
     "description": "Kind of metadata package for dependencies of the latest versions of FPDI and FPDF.",
     "type": "library",
@@ -12,8 +13,19 @@
             "homepage": "https://www.setasign.com"
         }
     ],
+    "autoload": {
+        "classmap": [
+            "fpdi_bridge.php"
+        ]
+    },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url":  "git@github.com:avestacorp/fpdf.git"
+        }
+    ],
     "require": {
-        "setasign/fpdf": "^1.8",
-        "setasign/fpdi": "^2.2"
+        "avestacorp/fpdf": "dev-master",
+        "setasign/fpdi": "1.6.2"
     }
 }
